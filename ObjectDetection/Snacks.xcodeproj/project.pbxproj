@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7124694A273994F3000929DA /* BoundingBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71246949273994F3000929DA /* BoundingBoxView.swift */; };
 		7B0EB8AA2052A38A00EB567E /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0EB8A92052A38A00EB567E /* VideoCapture.swift */; };
 		7B11BA832048333700D790AA /* CGImagePropertyOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B11BA822048333700D790AA /* CGImagePropertyOrientation.swift */; };
 		7BF6C660204818EC00606217 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF6C65F204818EC00606217 /* AppDelegate.swift */; };
@@ -15,10 +14,11 @@
 		7BF6C665204818EC00606217 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BF6C663204818EC00606217 /* Main.storyboard */; };
 		7BF6C667204818ED00606217 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BF6C666204818ED00606217 /* Assets.xcassets */; };
 		7BF6C66A204818ED00606217 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BF6C668204818ED00606217 /* LaunchScreen.storyboard */; };
+		AA2B2999277D92F7005DA14E /* SnackDetector.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AA2B2998277D92F7005DA14E /* SnackDetector.mlmodel */; };
+		AA2B299B277D974A005DA14E /* BoundingBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2B299A277D974A005DA14E /* BoundingBoxView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		71246949273994F3000929DA /* BoundingBoxView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BoundingBoxView.swift; path = ../../../../../../iOS2021/Assignments/iw05555/SnackLocalization/SnackLocalization/BoundingBoxView.swift; sourceTree = "<group>"; };
 		7B0EB8A92052A38A00EB567E /* VideoCapture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
 		7B11BA822048333700D790AA /* CGImagePropertyOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGImagePropertyOrientation.swift; sourceTree = "<group>"; };
 		7BF6C65C204818EC00606217 /* ObjectDetection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjectDetection.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -28,6 +28,8 @@
 		7BF6C666204818ED00606217 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7BF6C669204818ED00606217 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7BF6C66B204818ED00606217 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA2B2998277D92F7005DA14E /* SnackDetector.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SnackDetector.mlmodel; sourceTree = "<group>"; };
+		AA2B299A277D974A005DA14E /* BoundingBoxView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoundingBoxView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +46,7 @@
 		7BF6C653204818EC00606217 = {
 			isa = PBXGroup;
 			children = (
+				AA2B2998277D92F7005DA14E /* SnackDetector.mlmodel */,
 				7BF6C65E204818EC00606217 /* Snacks */,
 				7BF6C65D204818EC00606217 /* Products */,
 			);
@@ -61,8 +64,8 @@
 			isa = PBXGroup;
 			children = (
 				7BF6C65F204818EC00606217 /* AppDelegate.swift */,
+				AA2B299A277D974A005DA14E /* BoundingBoxView.swift */,
 				7BF6C661204818EC00606217 /* ViewController.swift */,
-				71246949273994F3000929DA /* BoundingBoxView.swift */,
 				7B11BA822048333700D790AA /* CGImagePropertyOrientation.swift */,
 				7B0EB8A92052A38A00EB567E /* VideoCapture.swift */,
 				7BF6C663204818EC00606217 /* Main.storyboard */,
@@ -146,7 +149,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BF6C662204818EC00606217 /* ViewController.swift in Sources */,
-				7124694A273994F3000929DA /* BoundingBoxView.swift in Sources */,
+				AA2B2999277D92F7005DA14E /* SnackDetector.mlmodel in Sources */,
+				AA2B299B277D974A005DA14E /* BoundingBoxView.swift in Sources */,
 				7B0EB8AA2052A38A00EB567E /* VideoCapture.swift in Sources */,
 				7BF6C660204818EC00606217 /* AppDelegate.swift in Sources */,
 				7B11BA832048333700D790AA /* CGImagePropertyOrientation.swift in Sources */,
@@ -295,14 +299,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = E98L3B5R56;
+				CURRENT_PROJECT_VERSION = 5;
+				DEVELOPMENT_TEAM = 86Q6XD4783;
 				INFOPLIST_FILE = Snacks/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.raywenderlich.ObjectDetection;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zstudio.ObjectDetection;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -316,14 +322,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = E98L3B5R56;
+				CURRENT_PROJECT_VERSION = 5;
+				DEVELOPMENT_TEAM = 86Q6XD4783;
 				INFOPLIST_FILE = Snacks/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.raywenderlich.ObjectDetection;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zstudio.ObjectDetection;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;

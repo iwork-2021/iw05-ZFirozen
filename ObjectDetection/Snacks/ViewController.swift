@@ -181,10 +181,47 @@ class ViewController: UIViewController {
 
   func processObservations(for request: VNRequest, error: Error?) {
     //call show function
+      if let results = request.results {
+          if results.isEmpty {
+              return
+          } else {
+              var predictions: [VNRecognizedObjectObservation] = []
+              for result in results {
+                  predictions.append(result as! VNRecognizedObjectObservation)
+              }
+              self.show(predictions: predictions)
+          }
+      } else if let error = error {
+          print("Error: \(error.localizedDescription)")
+      } else {
+          print("Unknown Error")
+      }
   }
 
   func show(predictions: [VNRecognizedObjectObservation]) {
-   //process the results, call show function in BoundingBoxView
+    //process the results, call show function in BoundingBoxView
+      var i = 0
+      for VNRObject in predictions {
+          if (i >= maxBoundingBoxViews) {
+              break
+          }
+          DispatchQueue.main.sync(execute: {
+              let identifier = VNRObject.labels[0].identifier
+              let bdBox = VNRObject.boundingBox
+              let bounds = UIScreen.main.bounds
+              let fixedCGRect = CGRect(x: bdBox.minX * bounds.width, y: (1 - bdBox.maxY) * bounds.height,
+                                       width: bdBox.width * bounds.width, height: bdBox.height * bounds.height)
+              boundingBoxViews[i].show(frame: fixedCGRect, label: identifier, color: colors[identifier]!)
+          })
+          i += 1
+      }
+      usleep(300000)
+      for j in i..<maxBoundingBoxViews {
+          DispatchQueue.main.sync(execute: {
+              boundingBoxViews[j].hide()
+          })
+      }
+  }
 }
 
 extension ViewController: VideoCaptureDelegate {
